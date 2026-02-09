@@ -1,8 +1,0 @@
-name: Transaction
-on: workflow_dispatch
-jobs:
-  stage_dev:
-    runs-on: ubuntu-latest
-    steps:
-      - name: lint
-        run: echo Hello
