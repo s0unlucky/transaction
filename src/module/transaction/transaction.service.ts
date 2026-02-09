@@ -12,8 +12,8 @@ import { CreateTransactionDto } from './dto/create-transaction.dto';
 import { DataSource } from 'typeorm';
 import { InjectDataSource } from '@nestjs/typeorm';
 import { GetTransactionFilterDto } from './dto/get-transaction-filter-dto';
-import { InternalAccountService } from 'src/internal/account.service';
-import { KafkaService } from 'src/config/kafka/kafka.service';
+import { InternalAccountService } from '../../internal/account.service';
+import { KafkaService } from '../../config/kafka/kafka.service';
 
 @Injectable()
 export class TransactionService {
