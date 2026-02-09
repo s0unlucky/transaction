@@ -8,6 +8,7 @@ import { EventNameEnum, TransactionType } from './transaction.types';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 import { TransactionEntity } from './entities/transaction.entity';
 import { mock } from 'jest-mock-extended';
+import { DataSource } from 'typeorm';
 
 describe('TransactionService', () => {
   let transactionService: TransactionService;
@@ -23,6 +24,10 @@ describe('TransactionService', () => {
           useValue: {
             createTransaction: jest.fn(),
           },
+        },
+        {
+          provide: 'DataSource',
+          useValue: mock<DataSource>(),
         },
         {
           provide: InternalAccountService,
