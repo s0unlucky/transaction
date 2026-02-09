@@ -78,7 +78,7 @@ describe('TransactionService', () => {
 
       expect(kafkaService.produce).toHaveBeenCalledWith({
         eventName: EventNameEnum.TransactionSaved,
-        data: {
+        date: {
           userId: createTransactionDto.userId,
           amount: createTransactionDto.amount,
           transactionId: createdTransaction.id,
