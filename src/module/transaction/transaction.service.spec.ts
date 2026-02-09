@@ -26,7 +26,7 @@ describe('TransactionService', () => {
           },
         },
         {
-          provide: DataSource,
+          provide: 'DATA_SOURCE',
           useValue: mock<DataSource>(),
         },
         {
